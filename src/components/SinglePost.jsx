@@ -5,7 +5,7 @@ import Header from "./Header";
 import Comment from "./Comment";
 import Axios from "axios";
 
-const backendUrl = "https://klenty-backend.herokuapp.com/api/v1/"
+const backendUrl = "https://parichay-fs-backend.herokuapp.com/api/v1/"
 
 const useStyles = makeStyles(() => ({
     singleItem: {
