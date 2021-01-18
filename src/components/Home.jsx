@@ -32,7 +32,7 @@ export default function Home(){
     }
 
     const getData = () => {
-        fetch(backendUrl+"posts", {
+        fetch(backendUrl+"api/v1/posts", {
             method : "get",
         }).then(res => res.json())
             .then(res2 => {setPostList(res2)});
@@ -44,7 +44,7 @@ export default function Home(){
 
 
     const saveData = (title, description, username) => {
-        Axios.post(backendUrl+"posts/", {
+        Axios.post(backendUrl+"api/v1/posts/", {
             title,
             description,
             username
@@ -56,7 +56,7 @@ export default function Home(){
          Axios({
             method: "GET",
             withCredentials: true,
-            url: "https://klenty-backend.herokuapp.com/api/v1/user",
+            url: "https://parichay-fs-backend.herokuapp.com/api/v1/user",
         }).then((res) => {
             if(res.data === "No User Exists" || res.data === ""){
                 handleUser("Login");
